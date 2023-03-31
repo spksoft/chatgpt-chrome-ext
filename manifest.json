@@ -3,10 +3,14 @@
   "name": "ChatGPT for Chrome based browsers",
   "version": "0.0.1",
   "action": { "default_popup": "src/popups/default/index.html" },
+  "options_page": "src/popups/option/index.html",
   "content_scripts": [
     {
       "js": ["src/content-scripts/google/index.jsx"],
       "matches": ["https://www.google.com/*"]
     }
+  ],
+  "permissions": [
+    "storage"
   ]
 }
